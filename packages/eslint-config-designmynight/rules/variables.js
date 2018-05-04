@@ -9,7 +9,7 @@ module.exports = {
     'no-catch-shadow': 'off',
 
     // disallow deletion of variables
-    'no-delete-var': 'error',
+    'no-delete-var': 'off',
 
     // disallow labels that share a name with a variable
     // https://eslint.org/docs/rules/no-label-var
@@ -25,18 +25,17 @@ module.exports = {
     'no-shadow-restricted-names': 'error',
 
     // disallow use of undeclared variables unless mentioned in a /*global */ block
-    'no-undef': 'error',
+    'no-undef': 'off',
 
     // disallow use of undefined when initializing variables
     'no-undef-init': 'error',
 
     // disallow use of undefined variable
     // https://eslint.org/docs/rules/no-undefined
-    // TODO: enable?
     'no-undefined': 'off',
 
     // disallow declaration of variables that are not used in the code
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+    'no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
 
     // disallow use of variables before they are defined
     'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],

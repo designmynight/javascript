@@ -17,7 +17,7 @@ module.exports = {
     'no-compare-neg-zero': 'error',
 
     // disallow assignment in conditional expressions
-    'no-cond-assign': ['error', 'always'],
+    'no-cond-assign': 'off',
 
     // disallow use of console
     'no-console': 'warn',
@@ -29,7 +29,7 @@ module.exports = {
     'no-control-regex': 'error',
 
     // disallow use of debugger
-    'no-debugger': 'error',
+    'no-debugger': 'warn',
 
     // disallow duplicate arguments in functions
     'no-dupe-args': 'error',
@@ -40,7 +40,7 @@ module.exports = {
     // disallow a duplicate case label.
     'no-duplicate-case': 'error',
 
-    // disallow empty statements
+    // disallow empty statements, can use comments in empty catch
     'no-empty': 'error',
 
     // disallow the use of empty character classes in regular expressions
@@ -51,17 +51,11 @@ module.exports = {
 
     // disallow double-negation boolean casts in a boolean context
     // https://eslint.org/docs/rules/no-extra-boolean-cast
-    'no-extra-boolean-cast': 'error',
+    'no-extra-boolean-cast': 'off',
 
     // disallow unnecessary parentheses
     // https://eslint.org/docs/rules/no-extra-parens
-    'no-extra-parens': ['off', 'all', {
-      conditionalAssign: true,
-      nestedBinaryExpressions: false,
-      returnAssign: false,
-      ignoreJSX: 'all', // delegate to eslint-plugin-react
-      enforceForArrowConditionals: false,
-    }],
+    'no-extra-parens': 'off',
 
     // disallow unnecessary semicolons
     'no-extra-semi': 'error',
@@ -100,7 +94,7 @@ module.exports = {
     'no-unexpected-multiline': 'error',
 
     // disallow unreachable statements after a return, throw, continue, or break statement
-    'no-unreachable': 'error',
+    'no-unreachable': 'warn',
 
     // disallow return/throw/break/continue inside finally blocks
     // https://eslint.org/docs/rules/no-unsafe-finally
@@ -109,6 +103,7 @@ module.exports = {
     // disallow negating the left operand of relational operators
     // https://eslint.org/docs/rules/no-unsafe-negation
     'no-unsafe-negation': 'error',
+
     // disallow negation of the left operand of an in expression
     // deprecated in favor of no-unsafe-negation
     'no-negated-in-lhs': 'off',

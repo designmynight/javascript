@@ -43,9 +43,6 @@ module.exports = {
     // disallow the use of alert, confirm, and prompt
     'no-alert': 'warn',
 
-    // disallow the use of console
-    'no-console': 'warn',
-
     // disallow use of arguments.caller or arguments.callee
     'no-caller': 'warn',
 

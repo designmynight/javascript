@@ -12,11 +12,11 @@ module.exports = {
     'global-require': 'error',
 
     // enforces error handling in callbacks (node environment)
-    'handle-callback-err': 'off',
+    'handle-callback-err': 'error',
 
     // disallow use of the Buffer() constructor
     // https://eslint.org/docs/rules/no-buffer-constructor
-    'no-buffer-constructor': 'error',
+    'no-buffer-constructor': 'off',
 
     // disallow mixing regular variable and require declarations
     'no-mixed-requires': ['off', false],
@@ -32,7 +32,7 @@ module.exports = {
     'no-process-env': 'off',
 
     // disallow process.exit()
-    'no-process-exit': 'off',
+    'no-process-exit': 'warn',
 
     // restrict usage of specified node modules
     'no-restricted-modules': 'off',

@@ -55,8 +55,7 @@ module.exports = {
 
     // disallow importing from the same path more than once
     // https://eslint.org/docs/rules/no-duplicate-imports
-    // replaced by https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
-    'no-duplicate-imports': 'off',
+    'no-duplicate-imports': 'error',
 
     // disallow symbol constructor
     // https://eslint.org/docs/rules/no-new-symbol
@@ -83,11 +82,7 @@ module.exports = {
 
     // disallow renaming import, export, and destructured assignments to the same name
     // https://eslint.org/docs/rules/no-useless-rename
-    'no-useless-rename': ['error', {
-      ignoreDestructuring: false,
-      ignoreImport: false,
-      ignoreExport: false,
-    }],
+    'no-useless-rename': 'off',
 
     // require let or const instead of var
     'no-var': 'error',

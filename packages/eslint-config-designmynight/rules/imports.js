@@ -42,7 +42,7 @@ module.exports = {
 
     // ensure default import coupled with default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
-    'import/default': 'off',
+    'import/default': 'error',
 
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
     'import/namespace': 'off',
@@ -68,29 +68,7 @@ module.exports = {
     // Forbid the use of extraneous packages
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
     // paths are treated both as absolute paths, and relative to process.cwd()
-    'import/no-extraneous-dependencies': ['error', {
-      devDependencies: [
-        'test/**', // tape, common npm pattern
-        'tests/**', // also common npm pattern
-        'spec/**', // mocha, rspec-like pattern
-        '**/__tests__/**', // jest pattern
-        '**/__mocks__/**', // jest pattern
-        'test.{js,jsx}', // repos with a single test file
-        'test-*.{js,jsx}', // repos with multiple top-level test files
-        '**/*{.,_}{test,spec}.{js,jsx}', // tests where the extension or filename suffix denotes that it is a test
-        '**/jest.config.js', // jest config
-        '**/webpack.config.js', // webpack config
-        '**/webpack.config.*.js', // webpack config
-        '**/rollup.config.js', // rollup config
-        '**/rollup.config.*.js', // rollup config
-        '**/gulpfile.js', // gulp config
-        '**/gulpfile.*.js', // gulp config
-        '**/Gruntfile{,.js}', // grunt config
-        '**/protractor.conf.js', // protractor config
-        '**/protractor.conf.*.js', // protractor config
-      ],
-      optionalDependencies: false,
-    }],
+    'import/no-extraneous-dependencies': 'off',
 
     // Forbid mutable exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
@@ -100,15 +78,14 @@ module.exports = {
 
     // disallow require()
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
-    'import/no-commonjs': 'off',
+    'import/no-commonjs': 'error',
 
     // disallow AMD require/define
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
-    'import/no-amd': 'error',
+    'import/no-amd': 'off',
 
     // No Node.js builtin modules
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md
-    // TODO: enable?
     'import/no-nodejs-modules': 'off',
 
     // Style guide:
@@ -127,7 +104,6 @@ module.exports = {
     'import/no-duplicates': 'error',
 
     // disallow namespace imports
-    // TODO: enable?
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
     'import/no-namespace': 'off',
 
@@ -141,7 +117,6 @@ module.exports = {
 
     // Enforce a convention in module import order
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-    // TODO: enable?
     'import/order': ['off', {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'never',
@@ -153,7 +128,7 @@ module.exports = {
 
     // Require modules with a single export to use a default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-    'import/prefer-default-export': 'error',
+    'import/prefer-default-export': 'warn',
 
     // Restrict which files can be imported in a given folder
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
@@ -190,8 +165,7 @@ module.exports = {
 
     // Prevent unassigned imports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
-    // importing for side effects is perfectly acceptable, if you need side effects.
-    'import/no-unassigned-import': 'off',
+    'import/no-unassigned-import': 'error',
 
     // Prevent importing the default as if it were named
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
@@ -210,8 +184,7 @@ module.exports = {
 
     // This rule enforces that all exports are declared at the bottom of the file.
     // https://github.com/benmosher/eslint-plugin-import/blob/98acd6afd04dcb6920b81330114e146dc8532ea4/docs/rules/exports-last.md
-    // TODO: enable?
-    'import/exports-last': 'off',
+    'import/exports-last': 'error',
 
     // Reports when named exports are not grouped together in a single export declaration
     // or when multiple assignments to CommonJS module.exports or exports object are present
@@ -229,7 +202,7 @@ module.exports = {
 
     // Forbid cyclical dependencies between modules
     // https://github.com/benmosher/eslint-plugin-import/blob/d81f48a2506182738409805f5272eff4d77c9348/docs/rules/no-cycle.md
-    'import/no-cycle': ['error', { maxDepth: Infinity }],
+    'import/no-cycle': 'off',
 
     // Ensures that there are no useless path segments
     // https://github.com/benmosher/eslint-plugin-import/issues/1032
