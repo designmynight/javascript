@@ -1,0 +1,48 @@
+{
+  "name": "eslint-config-designmynight-typescript",
+  "version": "0.0.0",
+  "description": "DesignMyNight's TypeScript ESLint config",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designmynight/javascript"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "designmynight",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "DesignMyNight",
+  "contributors": [
+    {
+      "name": "James O'Sullivan",
+      "url": "https://github.com/jmosul"
+    },
+    {
+      "name": "Dan Johnson",
+      "url": "https://github.com/danjohnson95"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/designmynight/javascript/issues"
+  },
+  "homepage": "https://github.com/designmynight/javascript",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  },
+  "peerDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-designmynight": "^0.0.0"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+  }
+}
